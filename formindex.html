@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="formstyle.css">
+        <link rel="icon" href="https://media.tenor.com/UrcjfY1nSCgAAAAM/paw-kitten.gif" type="image/png">
+        <title>Formulário de Adoção</title>
+    </head>
+
+    <body>
+        <div class="form-bg">
+            <h3>Formulário de Adoção</h3>
+
+            <form class="form">
+                <input placeholder="Seu Nome" maxlength="50" name="form-name" type="text">
+                <input placeholder="Seu Número de Contato" maxlength="9" name="form-phone" type="text">
+                <input placeholder="Sua Localização" maxlength="50" name="form-city" type="text">
+                <input placeholder="Seu E-mail" maxlength="50" name="form-email" type="email">
+
+                <select name="form-preferency" class="form-preferency">
+                    <option value="">Gatinho Selecionado</option>
+                    <option value="Sim">Sim</option>
+                    <option value="Não">Não</option>
+                </select>
+
+                <select name="form-business" class="form-business">
+                    <option value="">Você trabalha?</option>
+                    <option value="Sim">Sim</option>
+                    <option value="Não">Não</option>
+                </select>
+
+                <input placeholder="Alguma pergunta?" maxlength="50" name="form-question" class="form-question" type="text">
+                
+                <label for="form-auth" class="label-auth">
+                    <input id="form-auth" type="checkbox" required class="checkbox-auth">
+                    <span class="box"></span>
+                    Concordo com o envio das informações cedidas
+                </label>
+                <button type="submit">Enviar</button>
+                
+            </form>
+        </div>
+
+        <div class="sideimgs">
+            <img id="image-left" src="https://24.media.tumblr.com/71253660ecf05787b00e8a68dca5c8eb/tumblr_n06ok4d0QK1t08m3ao2_400.gif" alt="Imagem à esquerda">
+            <img id="image-right" src="https://i.pinimg.com/originals/9e/9e/0b/9e9e0bd79194e3d4f43ff1c8abb4597b.gif" alt="Imagem à direita">
+        </div>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                var label = document.querySelector('label[for="form-auth"]');
+            
+                label.addEventListener('click', function (event) {
+                    var checkbox = document.getElementById('form-auth');
+                    checkbox.checked = !checkbox.checked;
+                });
+            });
+        </script>
+            
+    </body>
+</html>
+
